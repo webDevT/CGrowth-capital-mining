@@ -6,24 +6,40 @@ body
     font-family: $main-font
     font-size: 1.250vw
     font-weight: 400
+    line-height: 1.2
+    box-sizing: border-box
+    font-weight: 400
+    //letter-spacing: -0.01vw
 .container-fluid 
     width: 990px 
     max-width: 87.200vw
     padding-left: 0 
     padding-right: 0
+
 .h2 
     text-transform: uppercase
     color: #fff
     line-height: 0.9
     font-weight: 700
     font-size: 2.361vw
+    margin-bottom: 1.250vw
     span 
         color: $orange
         
 .h2-l 
     font-size: 2.778vw
     display: block
-
+.sub-title 
+    font-size: 1.667vw
+    font-weight: 700 
+    text-transform: uppercase
+    margin-bottom: 0.694vw
+    line-height: 1.1
+.white 
+    color: #fff
+.container-fluid--1000
+    width: 75vw
+    max-width: 87.200vw
 
 //end global style
 
@@ -39,6 +55,7 @@ body
     top: 0 
     left: 0 
     width: 100%
+    letter-spacing: 0vw
 //end top-header
 
 //start main screen style
@@ -87,10 +104,43 @@ body
 .logo 
     img 
         width: 4.769vw
-//end header style
 .mobile-menu-header,
 .mobile-menu__footer
     display: none
+//end header style
+
+//start company overview style
+.company-overview 
+    padding-top: 11.6vw
+    padding-bottom: 10vw
+    position: relative
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(252, 252, 252, 0.52) 52.08%, rgba(217, 217, 217, 0.44) 100%)
+    .container-fluid 
+        display: flex 
+        justify-content: flex-end
+.company-overview__content
+    width: 40vw
+    position: relative
+    z-index: 3
+
+.company-overview__bg
+    height: 100% 
+    width: 84.722vw 
+    background: #000
+    background-image: url('../img/co.png')
+    background-size: auto 40.972vw
+    background-repeat: no-repeat
+    position: absolute 
+    top: 0 
+    right: 0
+.company-overview__img 
+    position: absolute 
+    width: 39.792vw
+    top: -6.736vw
+    left: 0
+    img 
+        width: 100%
+//end company overwiew style
 
 @import "media"
 
