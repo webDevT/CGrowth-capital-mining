@@ -45,6 +45,11 @@ p
     color: #000
 .grey 
     color: #545454
+.gold 
+    color: $gold
+.h2 
+    .gold 
+        color: $gold
 .container-fluid--1000
     width: 75vw
     max-width: 87.200vw
@@ -286,6 +291,44 @@ p
     font-size: 1.111vw
 //end footer
 
+//start about hero 
+.about-hero 
+    height: 69.097vw
+    background: url('../img/about.png')
+    background-size: 100vw
+    padding-top: 26.806vw
+    background-repeat: no-repeat
+    .container-fluid
+        display: flex 
+        justify-content: flex-end
+        width: 74vw
+.about-hero__title 
+    width: 28vw
+    
+//end about hero
+.header--black
+    .menu 
+        li a 
+            color: #000
+        li a.active 
+            border-color: #000
+.about-item 
+    width: 50%  
+    padding-top: 6.111vw
+    padding-bottom: 6.111vw
+    p 
+        margin-bottom: 0.694vw     
+.about-row
+    display: flex
+.about-item:first-child 
+    border-right: 0.139vw solid $gold
+    transform: translateX(0.4vw) 
+    padding-right: 4.722vw
+.about-item:nth-child(2)
+    padding-left: 4.722vw
+    text-align: right
+.about 
+    padding-bottom: 3.750vw
 @import "media"
 
 
