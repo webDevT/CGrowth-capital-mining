@@ -50,12 +50,19 @@ p
 .h2 
     .gold 
         color: $gold
+.h2 
+    .grey 
+        color: #A3A3A3
+.light-grey 
+    color: #D9D9D9
 .container-fluid--1000
     width: 75vw
     max-width: 87.200vw
 .text-14
     font-size: 0.972vw 
     font-weight: 700
+.sub-title--light-grey 
+    color: #D9D9D9
 //end global style
 
 //start top-header
@@ -329,6 +336,56 @@ p
     text-align: right
 .about 
     padding-bottom: 3.750vw
+
+//start team style 
+.team 
+    padding-top: 52.083vw
+    padding-bottom: 4.167vw
+    background-color: #000
+    background-image: url('../img/team.png')
+    background-size: 100vw 
+    background-repeat: no-repeat
+.team-list 
+    padding-top: 4.167vw
+.team-list 
+    display: flex 
+    justify-content: space-between
+.team__item 
+    width: 15vw
+    img 
+         
+        object-fit: cover 
+        object-position: center
+    p 
+        padding-top: 0.694vw
+.team__item-img-wrapper
+    height: 16.667vw  
+    overflow: hidden
+    border-radius: 0.694vw
+
+.team__item-img 
+    width: 160%
+    position: relative 
+    left: -1.8vw
+    top: -1.8vw
+
+    
+.team__item-name 
+    padding-top: 1.250vw
+    font-weight: 700 
+    color: $gold 
+    text-transform: uppercase
+.team__item-sub-title 
+    font-size: 1.111vw
+    color: #fff
+    margin-top: 0.139vw
+.team__item:nth-child(3),
+.team__item:nth-child(4)
+    .team__item-img 
+        left: -5.5vw
+//end team style 
+
+
 @import "media"
 
 
