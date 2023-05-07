@@ -6,4 +6,7 @@ $('.menu-btn').click(function(){
 $('.close-btn').click(function(){
     $('.menu').removeClass('active');
 })
+
+
+
 });
