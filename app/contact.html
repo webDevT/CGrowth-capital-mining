@@ -83,19 +83,19 @@
 
 			<div class="mobile-menu__footer">
 				<div class="mobile-menu__social">
-			<a href="">
+			<a href="https://twitter.com/cgraotc" target="_blank">
 				<img src="img/twitter.svg" alt="">
 			</a>
 
-			<a href="">
+			<a href="https://www.linkedin.com/company/cgrowthcapital/about/?viewAsMember=true" target="_blank">
 				<img src="img/in.svg" alt="">
 			</a>
 
-			<a href="">
+			<!-- <a href="">
 				<img src="img/telegram.svg" alt="">
-			</a>
+			</a> -->
 
-			<a href="">
+			<a href="https://www.youtube.com/channel/UCNtlDhtxc6eJmlGlMj01eOw" target="_blank">
 				<img src="img/youtube.svg" alt="">
 			</a>
 			</div>
@@ -131,23 +131,30 @@
 <section class="contact-content">
 	<div class="container-fluid">
 
-		<form class="contact-form">
+		<!-- <form class="contact-form" id="form">
 			<input type="" class="input input-name" placeholder="Full Name">
 			<input type="" class="input input-email" placeholder="Email Address">
-			<input type="" class="input input-mobile" placeholder="Mobile Number">
-			<textarea name="" id="" cols="30" rows="10" placeholder="Leave a message" class="textarea"></textarea>
+			<input type="" class="input input-mobile" placeholder="Email Address">
+			<textarea name="" id="" cols="30" rows="10" placeholder=Email Address" class="textarea"></textarea>
+		</form> -->
+		
+		<form id="form" class="contact-form">
+			<input type="text" name="name" placeholder="Full Name" required class="input input-name" />
+			<input type="text" name="email" placeholder="Email Address" required class="input input-email"/>
+			<input type="text" name="phone" placeholder="Email Address" required class="input input-mobile"/>
+			<textarea name="msg" id="" cols="30" rows="10" class="textarea" placeholder="Email Address"></textarea>
+			<button class="submit-button">Submit</button>
 		</form>
-
 		<div class="contact-info">
 			<div class="contact-info__wrapper">
 				<div class="contact-info__item">
-				<a href="mailto:hello@cgcapital" class="mail-map-item">
+				<a href="mailto:hello@cgrowthcapitalmining.com" class="mail-map-item">
 					<div class="mail-map-icon-wrapper">
 						<img src="img/XMLID 10956.svg" alt="">
 					</div>
 
 					<div class="mail-map-text">
-						hello@cgcapital
+						hello@cgrowthcapitalmining.com
 					</div>
 
 				</a>
@@ -222,9 +229,9 @@
 			</div>
 			
 
-			<div class="submit-button">
+			<!-- <div class="submit-button">
 				<input type="submit" class="submit-button" value="Submit">
-			</div>
+			</div> -->
 		</div>
 
 	</div>
@@ -239,19 +246,19 @@
 			</div>
 			
 			<div class="mobile-menu__social">
-			<a href="">
+			<a href="https://twitter.com/cgraotc" target="_blank">
 				<img src="img/twitter.svg" alt="">
 			</a>
 
-			<a href="">
+			<a href="https://www.linkedin.com/company/cgrowthcapital/about/?viewAsMember=true" target="_blank">
 				<img src="img/in.svg" alt="">
 			</a>
 
-			<a href="">
+			<!-- <a href="">
 				<img src="img/telegram.svg" alt="">
-			</a>
+			</a> -->
 
-			<a href="">
+			<a href="https://www.youtube.com/channel/UCNtlDhtxc6eJmlGlMj01eOw" target="_blank">
 				<img src="img/youtube.svg" alt="">
 			</a>
 			</div>
@@ -266,5 +273,23 @@
   crossorigin="anonymous"></script>
 
 	<script src="js/main.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+	
+	$("#form").submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+			alert("Thank you! Message successfully sent!");
+			$("#form").trigger("reset");
+		});
+		return false;
+	});
+	
+	});
 </body>
 </html>
