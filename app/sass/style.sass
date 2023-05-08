@@ -588,6 +588,14 @@ p
     display: block 
     margin-left: auto 
     margin-right: auto
+.slider-item
+    embed 
+        width: 80vw
+        height: 90vh
+        display: block
+        margin-left: auto
+        margin-right: auto
+
 .investors__img
     width: 80vw
 .investors-modal
@@ -620,7 +628,8 @@ p
 .close-modal
     position: absolute
     top: 3.5vw
-    right: 9.7vw
+    right: 3.5vw
+    z-index: 99
     img 
         width: 1.389vw
 .next-btn,
@@ -811,7 +820,10 @@ p
 
 .mobile-menu__social a img:hover 
     opacity: 0.7
-    
+.investors-item,
+.investors-item:hover
+    color: #fff 
+    text-decoration: none  
 @import "media"
 
 
